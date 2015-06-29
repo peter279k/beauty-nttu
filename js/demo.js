@@ -13,7 +13,7 @@
 
 $(function () {
       'use strict';
-    $.post("php/get_photo.php", function(response) {
+    $.post("http://peter279k.com/beautywall/php/get_photo.php", function(response) {
         var result = $.parseJSON(response);
         result = result["photos"]["photo"];
         var str = "";
