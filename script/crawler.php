@@ -1,7 +1,17 @@
 <?php
 	set_time_limit(0);
 	ini_set("display_errors", "On");
-	require "../vendor/autoload.php";
+	
+	$dirs = __DIR__;
+	$dirs = explode("/", $dirs);
+	$dir = "/";
+	
+	foreach($dirs as $value) {
+		if(strlen($value) !== 0)
+			$dir .= $value . "/";
+	}
+	
+	require "vendor/autoload.php";
 	require "CnnectDB.php";
 	
 	use GuzzleHttp\Client;
