@@ -11,7 +11,7 @@
 			$dir .= $value . "/";
 	}
 	
-	require "vendor/autoload.php";
+	require $dir . "vendor/autoload.php";
 	require "CnnectDB.php";
 	
 	use GuzzleHttp\Client;
