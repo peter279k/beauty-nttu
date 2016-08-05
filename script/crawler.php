@@ -39,6 +39,8 @@
 		}
 	}
 	
+	echo $AppToken . "\n";
+	
 	$contents = array();
 	$PageID = array("1450930895146846");
 	$response = $client -> request('GET', "https://graph.facebook.com/" . $PageID[0] . "/feed?access_token=" . $AppToken, ["verify" => false]);
