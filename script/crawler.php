@@ -35,11 +35,9 @@
 	else {
 		while(!feof($handle)) {
 			if(strlen(fgets($handle)) != 0)
-			$AppToken = fgets($handle);
+			$AppToken = fgets($handle, 4096);
 		}
 	}
-	
-	echo $AppToken . "\n";
 	
 	$contents = array();
 	$PageID = array("1450930895146846");
