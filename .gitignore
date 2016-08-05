@@ -2,3 +2,5 @@ vendor
 compoer.phar
 bower_components
 bowerphp.phar
+ConnectDB.php
+token
