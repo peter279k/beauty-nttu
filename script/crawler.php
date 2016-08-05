@@ -26,7 +26,7 @@
 	
 	$AppToken = "";
 	
-	$handle = @fopen("./token/tokens.txt", "r");
+	$handle = @fopen($dir . "script" . "/token/tokens.txt", "r");
 	
 	if(!$handle) {
 		echo "the token file is not existed.";
