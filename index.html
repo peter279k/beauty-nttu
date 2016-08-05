@@ -7,49 +7,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
-	<link rel="stylesheet" href="css/blueimp-gallery.css">
-	<link rel="stylesheet" href="css/blueimp-gallery-indicator.css">
-	<link rel="stylesheet" href="css/blueimp-gallery-video.css">
-	<link rel="stylesheet" href="css/demo.css">
-	<script src="js/blueimp-helper.js"></script>
-	<script src="js/blueimp-gallery.js"></script>
-	<script src="js/blueimp-gallery-fullscreen.js"></script>
-	<script src="js/blueimp-gallery-indicator.js"></script>
-	<script src="js/blueimp-gallery-video.js"></script>
-	<script src="js/blueimp-gallery-vimeo.js"></script>
-	<script src="js/blueimp-gallery-youtube.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/jquery.unveil.js"></script>
+	<link ref="bower_components/bootswatch/flatly/bootstrap.min.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
+	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 </head>
 <body>
 	<h1>表特牆</h1>
-	<p>資料來源: 表特東大</p>
-	<ul class="navigation"></ul>
+	<p>資料來源: <a href="https://www.facebook.com/BeautyNTTU/?fref=ts">表特東大</a></p>
 	<h2>表特畫廊</h2>
-	<!-- The container for the list of example images -->
-	<div id="links" class="links"></div>
-		<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-	<div id="blueimp-gallery" class="blueimp-gallery">
-   		<div class="slides"></div>
-    		<h3 class="title"></h3>
-    		<a class="prev">‹</a>
-    		<a class="next">›</a>
-    		<a class="close">×</a>
-    		<a class="play-pause"></a>
-    		<ol class="indicator"></ol>
-	</div>
-	<script>
-/*jslint evil: true */
-/*global window, document*/
-// Including jQuery via the protocol relative url above works for both http and https.
-// Explicitly including jQuery via https allows running the Gallery demo as local file:
-if (!window.jQuery) {
-    document.write(
-        '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"><\/script>'
-    );
-}
-</script>
-	<script src="js/jquery.blueimp-gallery.js"></script>
-	<script src="js/demo.js"></script>
 </body> 
 </html>
