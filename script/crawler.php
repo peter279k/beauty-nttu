@@ -37,6 +37,8 @@
 			if(strlen(fgets($handle)) != 0)
 			$AppToken = fgets($handle, 4096);
 		}
+		
+		fclose($handle);
 	}
 	
 	$contents = array();
