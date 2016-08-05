@@ -41,8 +41,7 @@
 	
 	$contents = array();
 	$PageID = array("1450930895146846");
-	
-	$response = $client -> get("https://graph.facebook.com/" . $PageID[0] . "/feed?access_token=" . $AppToken);
+	$response = $client -> request('GET', "https://graph.facebook.com/" . $PageID[0] . "/feed?access_token=" . $AppToken, ["verify" => false]);
 	
 	$page = json_decode($response -> getBody(), true);
 	
