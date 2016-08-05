@@ -26,7 +26,7 @@
 	
 	$AppToken = "";
 	
-	$handle = @fopen("./token/tokens.txt", "r");
+	$handle = @fopen($dir . "script" . "/token/tokens.txt", "r");
 	
 	if(!$handle) {
 		echo "the token file is not existed.";
@@ -70,8 +70,7 @@
 			$data["object_id"] = $ObjectID;
 			$data["created_time"] = $CreatedTime;
 			
-			if($page_arr[$counter] === $PageID[0])
-				$sql = "INSERT INTO beauty_nttu(message,obj_id,created_time) VALUES(:message,:object_id,:created_time)";
+			$sql = "INSERT INTO beauty_nttu(message,obj_id,created_time) VALUES(:message,:object_id,:created_time)";
 			
 			$result = $connection -> ProcessData($conn, $sql, $data, "insert-record");
 			
