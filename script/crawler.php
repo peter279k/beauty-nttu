@@ -7,6 +7,8 @@
 	$dir = "/";
 	
 	foreach($dirs as $value) {
+		if($value === "script")
+			continue;
 		if(strlen($value) !== 0)
 			$dir .= $value . "/";
 	}
