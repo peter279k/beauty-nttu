@@ -84,7 +84,7 @@
 			}
 		}
 		
-		$page = $client -> get($page["paging"]["next"]);
+		$response = $client -> request('GET', $page["paging"]["next"], ["verify" => false]);
 		$page = json_decode($response -> getBody(), true);
 		
 		$count = count($page["data"]);
