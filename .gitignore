@@ -1,5 +1,5 @@
 vendor
-compoer.phar
+composer.phar
 bower_components
 bowerphp.phar
 ConnectDB.php
