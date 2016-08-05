@@ -76,10 +76,10 @@
 			
 			switch($result) {
 				case "insert-fail":
-					file_put_contents("log/error.log", "insert-fail,".$message.",".$ObjectID."\r\n", FILE_APPEND);
+					file_put_contents($dir . "script" . "/log/error.log", "insert-fail,".$message.",".$ObjectID."\r\n", FILE_APPEND);
 					break;
 				case "duplicate-entry":
-					file_put_contents("log/error.log", "duplicate-entry,".$message.",".$ObjectID."\r\n", FILE_APPEND);
+					file_put_contents($dir . "script" . "/log/error.log", "duplicate-entry,".$message.",".$ObjectID."\r\n", FILE_APPEND);
 					break;
 			}
 		}
