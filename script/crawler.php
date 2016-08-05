@@ -89,4 +89,6 @@
 		
 		$count = count($page["data"]);
 	}
+	
+	$connection -> ConnectClose($conn);
 ?>
