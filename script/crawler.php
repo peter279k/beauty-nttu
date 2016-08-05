@@ -26,7 +26,7 @@
 	
 	$AppToken = "";
 	
-	$handle = @fopen($dir . "script" . "/token/tokens.txt", "r");
+	$handle = @fopen("./token/tokens.txt", "r");
 	
 	if(!$handle) {
 		echo "the token file is not existed.";
@@ -34,8 +34,9 @@
 	}
 	else {
 		while(!feof($handle)) {
-			if(strlen(fgets($handle)) != 0)
-				$AppToken = fgets($handle, 4096);
+			$temp = fgets($handle, 4096);
+			if($temp != "")
+				$AppToken = $temp;
 		}
 		
 		fclose($handle);
