@@ -14,7 +14,7 @@
 	}
 	
 	require $dir . "vendor/autoload.php";
-	require "CnnectDB.php";
+	require "ConnectDB.php";
 	
 	use GuzzleHttp\Client;
 	use GuzzleHttp\Exception\RequestException;
