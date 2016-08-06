@@ -1,0 +1,9 @@
+{
+	"name": "beauty-nttu",
+	"version": "0.0.0",
+	"dependencies": {
+		"bootstrap": "^3.3",
+		"jquery": "^2.2",
+		"swipebox": "^1.4"
+	}
+}

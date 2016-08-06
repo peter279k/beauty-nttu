@@ -22,7 +22,7 @@
 			padding: 2px;
 		}
 	</style>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
 	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
