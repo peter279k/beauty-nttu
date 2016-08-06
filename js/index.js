@@ -6,4 +6,8 @@ $(function() {
   			$(window).lazyLoadXT();
   		}, 50);
 	});
+	
+	$.get("/", function() {
+		
+	});
 });
