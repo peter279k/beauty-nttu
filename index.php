@@ -23,7 +23,7 @@
 		for($index=0;$index<$len;$index++) {
 			$message = $data[$index]["message"];
 			$normal = "https://graph.facebook.com/" . $data[$index]["obj_id"] . "/picture?type=normal";
-			$thumbnail = "https://graph.facebook.com/" . $data[$index]["obj_id"] . "/picture?type=album";
+			$thumbnail = "https://graph.facebook.com/" . $data[$index]["obj_id"] . "/picture?type=normal";
 			
 			$str .= '<div class="col-sm-3">';
 			$str .= '<a title="' . $message . '" class="thumbnail swipebox" href="'. $normal . '">';
