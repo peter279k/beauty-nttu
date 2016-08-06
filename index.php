@@ -33,7 +33,7 @@
 		Flight::render('index_view.php', array('data' => $str));
 	});
 	
-	$app -> route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
+	$app -> route('GET /bower_components/bootswatch/darkly/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
