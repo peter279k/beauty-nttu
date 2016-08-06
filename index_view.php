@@ -8,26 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
 	<link ref="bower_components/bootswatch/flatly/bootstrap.min.css">
+	<link ref="css/index.css">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
 	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
-	<style>
-		.hide-bullets {
-			list-style:none;
-			margin-left: -40px;
-			margin-top:20px;
-		}
-		
-		.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-			width: 100%;
-		}
-		
-		.thumbnail{
-			border: 1px solid white;
-			padding: 2px;
-		}
-	</style>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -37,11 +23,7 @@
             <div class="col-sm-12" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
                 <ul class="hide-bullets">
-                    <li class="col-sm-3">
-                        <a class="img-thumbnail" id="carousel-selector-0">
-                            <img src="http://placehold.it/150x150&text=zero" class="img-responsive">
-                        </a>
-                    </li>
+					'<?php echo $data; ?>'
                 </ul>
             </div>
             <!--/Slider-->
