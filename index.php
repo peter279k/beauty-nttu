@@ -1,5 +1,5 @@
 <?php
-	ini_set("display_errors", "On");
+	//ini_set("display_errors", "On");
 	ini_set('include_path', '~/www/beauty-nttu');
 	
 	require "vendor/autoload.php";
