@@ -52,9 +52,12 @@
         </div>
         <!-- /.container -->
     </nav>
-	
 	<div class="container">
-		<?php echo $data; ?>
+		<div class="row">
+            <div class="col-lg-12 text-center">
+				<?php echo $data; ?>
+			</div>
+		</div>
 	</div>
 </body> 
 </html>
