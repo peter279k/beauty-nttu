@@ -64,12 +64,6 @@
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
-	
-	$app -> map('notFound', function() {
-		header("HTTP/1.1 404 Not found");
-		header("Content-Type: text/html; charset=utf-8");
-		echo "<h2>Not found</h2>";
-	});
 
 	$app -> start();
 ?>
