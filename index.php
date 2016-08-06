@@ -5,17 +5,8 @@
 	require "vendor/autoload.php";
 	require "script/ConnectDB.php";
 	
-	function hello() {
-		return "hello world";
-	}
-	
-	use flight\Engine;
-	
-	$app = new Engine();
-	
-	$app -> route('GET /', function() {
-		
-		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
+	function RequsetData($gender) {
+		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【" . $gender . "】%'";
 		$conn = new ConnectDB();
 		$link = $conn -> InitialDB();
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
@@ -36,6 +27,17 @@
 			$str .= '</a>';
 		}
 		
+		return $str;
+	}
+	
+	use flight\Engine;
+	
+	$app = new Engine();
+	
+	$app -> route('GET /', function() {
+		
+		$str = RequsetData("正妹");
+		
 		Flight::render('index_view.php', array('data' => $str));
 	});
 	
@@ -50,8 +52,7 @@
 				$str .= '<p>Email: <a href="mailto:peter279k@gmail.com">聯絡信箱</a></p>';
 				break;
 			case "man":
-				$hello = hello();
-				$str = $hello;
+				$str = RequsetData("型男");
 				break;
 		}
 		
