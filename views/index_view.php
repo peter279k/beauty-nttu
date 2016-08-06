@@ -8,7 +8,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
 	<link ref="bower_components/bootswatch/flatly/bootstrap.min.css">
-	<link ref="css/index.css">
+	<style>
+		.hide-bullets {
+			list-style:none;
+			margin-left: -40px;
+			margin-top:20px;
+		}
+	
+		.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+			width: 100%;
+		}
+	
+		.thumbnail{
+			border: 1px solid white;
+			padding: 2px;
+		}
+	</style>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
+	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -30,11 +50,5 @@
 
 		</div>
 	</div>
-	
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
-	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
-	<script src="js/index.js"></script>
 </body> 
 </html>
