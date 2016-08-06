@@ -30,15 +30,17 @@
 </head>
 <body>
 	
-<div class="container">
-    <div id="main_area">
-        <div class="row">
-            <div class="col-sm-12">
-                <?php echo $data; ?>
-            </div>
-        </div>
-
-    </div>
-</div>
+	<div class="container">
+		<div id="main_area">
+			<div class="row">
+				<div class="col-sm-12">
+					<ul class="hide-bullets">
+						<?php echo $data; ?>
+					</ul>
+				</div>
+			</div>
+	
+		</div>
+	</div>
 </body> 
 </html>
