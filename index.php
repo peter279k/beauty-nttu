@@ -8,6 +8,7 @@
 		$conn = new ConnectDB();
 		$link = $conn -> InitialDB();
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
+		$conn -> ConnectClose($link);
 		$str = "";
 		$len = count($data);
 		
@@ -19,6 +20,7 @@
 			$str .= '</li>';
 		}
 		
+		echo $str;
 		Flight::render('index_view.php', array('data' => $str));
 		Flight::redirect('./index_view.php', 401);
 	});
