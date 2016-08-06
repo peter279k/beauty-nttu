@@ -64,6 +64,11 @@
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
+	
+	Flight::map('notFound', function(){
+		// Handle not found
+		echo "Not found";
+	});
 
 	$app -> start();
 ?>
