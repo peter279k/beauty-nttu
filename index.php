@@ -38,25 +38,42 @@
 		
 		$str = RequsetData("正妹");
 		
-		Flight::render('index_view.php', array('data' => $str));
+		$MaleFemale = '<li>
+			<a href="/beauty-nttu/man">型男版</a>
+        </li>';
+		
+		Flight::render('index_view.php', array('data' => $str, 'MaleFemale' => $MaleFemale));
 	});
 	
 	$app -> route('GET /@action', function($action) {
 		$str = "";
+		$MaleFemale = '<li>
+			<a href="/beauty-nttu/man">型男版</a>
+        </li>
+		<li>
+            <a href="/beauty-nttu/">正妹版</a>
+        </li>';
+		
 		switch($action) {
 			case "about":
-				$str = '<h2>Blog: <a href="https://peterweb-uploadspace.rhcloud.com/" target="_blank">連結</a></h2>';
+				$str = '<h2>Blog: <a href="https://peterweb-uploadspace.rhcloud.com/" target="_blank">連結網址</a></h2>';
 				break;
 			case "contact":
-				$str = '<h2>Github: <a href="https://github.com/peter279k" target="_blank">連結</a></h2>';
+				$str = '<h2>Github: <a href="https://github.com/peter279k" target="_blank">連結網址</a></h2>';
 				$str .= '<h2>Email: <a href="mailto:peter279k@gmail.com">聯絡信箱</a></h2>';
 				break;
 			case "man":
 				$str = RequsetData("型男");
+				$MaleFemale = '<li>
+					<a href="/beauty-nttu/man">正妹版</a>
+				</li>';
+				break;
+			case "link":
+				$str = '<h2>表特牆: <a href="https://mywebservice.info/beauty/" target="_blank">連結網址</a></h2>';
 				break;
 		}
 		
-		Flight::render('index_view.php', array('data' => $str));
+		Flight::render('index_view.php', array('data' => $str, 'MaleFemale' => $MaleFemale));
 	});
 	
 	$app -> route('GET /bower_components/bootswatch/darkly/@FileName', function($FileName) {

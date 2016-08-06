@@ -40,11 +40,9 @@
                         <a href="/beauty-nttu/contact">聯絡我們</a>
                     </li>
 					<li>
-                        <a href="/beauty-nttu/man">型男版</a>
+                        <a href="/beauty-nttu/link">友站連結</a>
                     </li>
-					<li>
-                        <a href="/beauty-nttu/">正妹版</a>
-                    </li>
+					<?php echo $MaleFemale; ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
