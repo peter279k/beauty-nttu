@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/beauty-nttu/" target="_blank">表特東大</a>
+                <a class="navbar-brand" href="/beauty-nttu/">表特東大</a>
             </div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

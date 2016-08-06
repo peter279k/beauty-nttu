@@ -12,7 +12,7 @@
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
 		$conn -> ConnectClose($link);
 		
-		$str = '<h2>資料來源：<a href="https://www.facebook.com/BeautyNTTU/?fref=ts">表特東大</a></h2>
+		$str = '<h2>資料來源：<a href="https://www.facebook.com/BeautyNTTU/?fref=ts" target="_blank">表特東大</a></h2>
 				<p>僅提供瀏覽，欣賞</p>';
 
 		$len = count($data);
@@ -45,11 +45,11 @@
 		$str = "";
 		switch($action) {
 			case "about":
-				$str = '<p>Blog: <a href="https://peterweb-uploadspace.rhcloud.com/">連結</a></p>';
+				$str = '<h2>Blog: <a href="https://peterweb-uploadspace.rhcloud.com/" target="_blank">連結</a></h2>';
 				break;
 			case "contact":
-				$str = '<p>Github: <a href="https://github.com/peter279k">連結</a></p>';
-				$str .= '<p>Email: <a href="mailto:peter279k@gmail.com">聯絡信箱</a></p>';
+				$str = '<h2>Github: <a href="https://github.com/peter279k" target="_blank">連結</a></h2>';
+				$str .= '<h2>Email: <a href="mailto:peter279k@gmail.com">聯絡信箱</a></h2>';
 				break;
 			case "man":
 				$str = RequsetData("型男");
