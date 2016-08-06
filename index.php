@@ -2,7 +2,7 @@
 	require "vendor/autload.php";
 	require "script/ConnectDB.php";
 	
-	Flight::route('/', function() {
+	Flight::route('GET /', function() {
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
 		$conn = new ConnectDB();
 		$link = $conn -> InitialDB();
