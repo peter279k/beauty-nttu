@@ -1,13 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<![endif]-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
-	<link ref="bower_components/bootswatch/flatly/bootstrap.min.css">
+	<link href="bower_components/bootswatch/flatly/bootstrap.min.css" rel="stylesheet">
 	<style>
 		.hide-bullets {
 			list-style:none;
@@ -36,7 +33,7 @@
     <div id="main_area">
         <!-- Slider -->
         <div class="row">
-            <div class="col-sm-6" id="slider-thumbs">
+            <div class="col-sm-12" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
                 <ul class="hide-bullets">
                     <li class="col-sm-3">
