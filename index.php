@@ -15,9 +15,12 @@
 		$link = $conn -> InitialDB();
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
 		$conn -> ConnectClose($link);
+		
 		$str = "";
 		$len = count($data);
 		
+		var_dump($data);
+		/*
 		for($index=0;$index<$len;$index++) {
 			$str .= '<li class="col-sm-3">';
 			$str .= '<a title="' . $data[$index]["message"] . '" class="img-thumbnail swipebox" href="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=normal" . '">';
@@ -25,6 +28,7 @@
 			$str .= '</a>';
 			$str .= '</li>';
 		}
+		*/
 		
 		//$app -> render('index_view.php', array('data' => $str));
 	});
