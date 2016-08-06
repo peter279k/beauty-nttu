@@ -24,7 +24,6 @@
 	</style>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
 	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 	<script src="js/index.js"></script>
 </head>
