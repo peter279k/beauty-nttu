@@ -24,11 +24,7 @@
 <body>
 	
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<?php echo $data; ?>
-			</div>
-		</div>
+		<?php echo $data; ?>
 	</div>
 </body> 
 </html>
