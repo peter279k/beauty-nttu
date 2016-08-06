@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-sm-12" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
-                <ul class="hide-bullets"><?php echo $data; ?></ul>
+                <?php echo $data; ?>
             </div>
            
             <!--/Slider-->

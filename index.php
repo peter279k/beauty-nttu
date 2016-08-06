@@ -25,11 +25,11 @@
 			$normal = "https://graph.facebook.com/" . $data[$index]["obj_id"] . "/picture?type=normal";
 			$thumbnail = "https://graph.facebook.com/" . $data[$index]["obj_id"] . "/picture?type=thumbnail";
 			
-			$str .= '<li class="col-sm-3">';
+			$str .= '<div class="col-sm-3">';
 			$str .= '<a title="' . $message . '" class="swipebox" href="'. $normal . '">';
 			$str .= '<img src="'. $thumbnail . '" alt="image">';
 			$str .= '</a>';
-			$str .= '</li>';
+			$str .= '</div>';
 		}
 		
 		Flight::render('index_view.php', array('data' => $str));
