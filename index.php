@@ -27,7 +27,8 @@
 			$str .= '</a>';
 			$str .= '</li>';
 		}
-		echo $str;
+		
+		echo "<pre>" . $str . "</pre>";
 		Flight::render('index_view.php', array('data' => $str));
 	});
 	
