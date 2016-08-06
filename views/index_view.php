@@ -7,12 +7,6 @@
 	<link href="bower_components/bootswatch/flatly/bootstrap.min.css" rel="stylesheet">
 	<link href="bower_components/swipebox/src/css/swipebox.min.css" rel="stylesheet">
 	<style>
-		.hide-bullets {
-			list-style:none;
-			margin-left: -40px;
-			margin-top:20px;
-		}
-	
 		.carousel-inner>.item>img, .carousel-inner>.item>a>img {
 			width: 100%;
 		}
@@ -30,15 +24,10 @@
 <body>
 	
 	<div class="container">
-		<div id="main_area">
-			<div class="row">
-				<div class="col-sm-12">
-					<ul class="hide-bullets">
-						<?php echo $data; ?>
-					</ul>
-				</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<?php echo $data; ?>
 			</div>
-	
 		</div>
 	</div>
 </body> 
