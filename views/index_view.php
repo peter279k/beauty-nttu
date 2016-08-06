@@ -20,9 +20,15 @@
     <div id="main_area">
         <!-- Slider -->
         <div class="row">
-            <div class="col-sm-12" id="slider-thumbs">
+            <div class="col-sm-12">
                 <!-- Bottom switcher of slider -->
-                <ul class="hide-bullets"></ul>
+                <ul class="hide-bullets">
+					<li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-0">
+                            <img src="http://placehold.it/150x150&text=zero">
+                        </a>
+                    </li>
+				</ul>
             </div>
             <!--/Slider-->
         </div>
