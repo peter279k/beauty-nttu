@@ -26,8 +26,8 @@
 			$thumbnail = "https://graph.facebook.com/" . $data[$index]["obj_id"] . "/picture?type=thumbnail";
 			
 			$str .= '<li class="col-sm-3">';
-			$str .= '<a title="$message" class="img-thumbnail swipebox" href="$normal">';
-			$str .= '<img data-src="$thumbnail" class="img-responsive">';
+			$str .= '<a title="' . $message . '" class="img-thumbnail swipebox" href="'. $normal . '">';
+			$str .= '<img data-src="'. $thumbnail . '" class="img-responsive">';
 			$str .= '</a>';
 			$str .= '</li>';
 		}
