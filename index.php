@@ -1,6 +1,7 @@
 <?php
 	require "vendor/autload.php";
 	require "script/ConnectDB.php";
+	ini_set("display_errors", "On");
 	
 	Flight::route('GET /', function() {
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
