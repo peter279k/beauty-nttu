@@ -30,7 +30,7 @@
 		}
 		*/
 		
-		Flight::render('index_view.php', array('data' => $str));
+		echo file_get_contents("views/index_view.php");
 	});
 	
 	$app -> route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
