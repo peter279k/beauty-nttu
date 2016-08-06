@@ -5,6 +5,10 @@
 	require "vendor/autoload.php";
 	require "script/ConnectDB.php";
 	
+	function hello() {
+		return "hello world";
+	}
+	
 	use flight\Engine;
 	
 	$app = new Engine();
@@ -44,6 +48,10 @@
 			case "contact":
 				$str = '<p>Github: <a href="https://github.com/peter279k">連結</a></p>';
 				$str .= '<p>Email: <a href="mailto:peter279k@gmail.com">聯絡信箱</a></p>';
+				break;
+			case "man":
+				$hello = hello();
+				$str = $hello;
 				break;
 		}
 		
