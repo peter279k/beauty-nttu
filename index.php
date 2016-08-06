@@ -5,7 +5,7 @@
 	
 	$app = new \Slim\Slim();
 	
-	$app -> get('/', function() {
+	$app -> get('/index', function() {
 		echo "Hello World";
 		/*
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
