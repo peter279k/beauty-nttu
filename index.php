@@ -17,7 +17,9 @@
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
 		$conn -> ConnectClose($link);
 		
-		$str = "";
+		$str = '<h2>資料來源：<a href="https://www.facebook.com/BeautyNTTU/?fref=ts">表特東大</a></h2>
+				<p>僅提供瀏覽，欣賞</p>';
+
 		$len = count($data);
 
 		for($index=0;$index<$len;$index++) {
@@ -28,6 +30,21 @@
 			$str .= '<a title="' . $message . '" class="swipebox" href="'. $normal . '">';
 			$str .= '<img src="'. $thumbnail . '" alt="image" class="img-rounded">';
 			$str .= '</a>';
+		}
+		
+		Flight::render('index_view.php', array('data' => $str));
+	});
+	
+	$app -> route('GET /@action', function($action) {
+		$str = "";
+		switch($action) {
+			case "about":
+				$str = '<p>Blog: <a href="https://peterweb-uploadspace.rhcloud.com/">連結</a></p>';
+				break;
+			case "contact":
+				$str = '<p>Github: <a href="https://github.com/peter279k">連結</a></p>';
+				$str .= '<p>Email: <a href="mailto:peter279k@gmail.com">聯絡信箱</a></p>';
+				break;
 		}
 		
 		Flight::render('index_view.php', array('data' => $str));

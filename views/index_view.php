@@ -30,14 +30,24 @@
                 </button>
                 <a class="navbar-brand" href="#">表特東大</a>
             </div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/about">關於我</a>
+                    </li>
+                    <li>
+                        <a href="/contact">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 	<div class="container">
 		<div class="row">
             <div class="col-lg-12 text-center">
-				<h2>資料來源：<a href="https://www.facebook.com/BeautyNTTU/?fref=ts">表特東大</a></h2>
-				<p>僅提供瀏覽，欣賞</p>
 				<?php echo $data; ?>
 			</div>
 		</div>
