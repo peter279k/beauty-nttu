@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
-	<link href="bower_components/bootswatch/darkly/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="bower_components/swipebox/src/css/swipebox.min.css" rel="stylesheet">
 	<style>
 		.carousel-inner>.item>img, .carousel-inner>.item>a>img {

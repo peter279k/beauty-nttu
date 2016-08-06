@@ -33,11 +33,6 @@
 		Flight::render('index_view.php', array('data' => $str));
 	});
 	
-	$app -> route('GET /bower_components/bootswatch/darkly/@FileName', function($FileName) {
-		$FileName = htmlentities($FileName, "utf-8");
-		echo @file_get_contents($FileName);
-	});
-	
 	$app -> route('GET /css/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
@@ -49,6 +44,11 @@
 	});
 	
 	$app -> route('GET /bower_components/bootstrap/dist/js/@FileName', function($FileName) {
+		$FileName = htmlentities($FileName, "utf-8");
+		echo @file_get_contents($FileName);
+	});
+	
+	$app -> route('GET /bower_components/bootstrap/dist/css/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
