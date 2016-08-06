@@ -10,7 +10,6 @@
 	$app = new Engine();
 	
 	$app -> route('GET /', function() {
-		header("Content-Type: text/html");
 		
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
 		$conn = new ConnectDB();
@@ -28,7 +27,7 @@
 			$str .= '</a>';
 			$str .= '</li>';
 		}
-		
+		echo $str;
 		Flight::render('index_view.php', array('data' => $str));
 	});
 	
