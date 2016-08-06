@@ -19,18 +19,15 @@
 		$str = "";
 		$len = count($data);
 		
-		var_dump($data);
-		/*
 		for($index=0;$index<$len;$index++) {
 			$str .= '<li class="col-sm-3">';
-			$str .= '<a title="' . $data[$index]["message"] . '" class="img-thumbnail swipebox" href="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=normal" . '">';
-			$str .= '<img data-src="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=thumbnail" . '" class="img-responsive">';
+			$str .= '<a title="' . $data[$index]["message"] . '" class="img-thumbnail swipebox" href="' . "https://graph.facebook.com/" + $data[$index]["obj_id"] + "/picture?type=normal" . '">';
+			$str .= '<img data-src="' . "https://graph.facebook.com/" + $data[$index]["obj_id"] + "/picture?type=thumbnail" . '" class="img-responsive">';
 			$str .= '</a>';
 			$str .= '</li>';
 		}
-		*/
 		
-		//$app -> render('index_view.php', array('data' => $str));
+		$app -> render('index_view.php', array('data' => $str));
 	});
 	
 	$app -> route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
