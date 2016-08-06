@@ -12,10 +12,42 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.min.js"></script>
 	<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
+	<style>
+		.hide-bullets {
+			list-style:none;
+			margin-left: -40px;
+			margin-top:20px;
+		}
+		
+		.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+			width: 100%;
+		}
+		
+		.thumbnail{
+			border: 1px solid white;
+			padding: 2px;
+		}
+	</style>
 </head>
 <body>
-	<h1>表特牆</h1>
-	<p>資料來源: <a href="https://www.facebook.com/BeautyNTTU/?fref=ts">表特東大</a></p>
-	<h2>表特畫廊</h2>
+	<div class="container">
+    <div id="main_area">
+        <!-- Slider -->
+        <div class="row">
+            <div class="col-sm-12" id="slider-thumbs">
+                <!-- Bottom switcher of slider -->
+                <ul class="hide-bullets">
+                    <li class="col-sm-3">
+                        <a class="img-thumbnail" id="carousel-selector-0">
+                            <img src="http://placehold.it/150x150&text=zero" class="img-responsive">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--/Slider-->
+        </div>
+
+    </div>
+</div>
 </body> 
 </html>
