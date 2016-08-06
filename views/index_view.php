@@ -4,16 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
-	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootswatch/darkly/bootstrap.min.css" rel="stylesheet">
 	<link href="bower_components/swipebox/src/css/swipebox.min.css" rel="stylesheet">
 	<style>
-		.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-			width: 100%;
-		}
-	
-		.thumbnail{
-			border: 1px solid white;
-			padding: 2px;
+		body {
+			padding-top: 70px;
+			/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 		}
 	</style>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
