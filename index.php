@@ -17,10 +17,9 @@
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
 		$conn -> ConnectClose($link);
 		
-		$str = "test";
+		$str = "";
 		$len = count($data);
-		
-		/*
+
 		for($index=0;$index<$len;$index++) {
 			$str .= '<li class="col-sm-3">';
 			$str .= "<a title=" . '"' . $data[$index]["message"] . '"' . ' class="img-thumbnail swipebox" href=' . '"' . "https://graph.facebook.com/" + $data[$index]["obj_id"] + "/picture?type=normal" . '"' . '>';
@@ -28,9 +27,8 @@
 			$str .= '</a>';
 			$str .= '</li>';
 		}
-		*/
 		
-		echo file_get_contents("views/index_view.php");
+		Flight::render('index_view.php', array('data' => $str));
 	});
 	
 	$app -> route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
