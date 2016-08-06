@@ -31,7 +31,13 @@
 <body>
 	
 	<div class="container">
-		<?php echo $data; ?>
-	</div>
+        <div class="row">
+            <div class="col-sm-12">
+                <?php echo $data; ?>
+            </div>
+        </div>
+
+    </div>
+</div>
 </body> 
 </html>
