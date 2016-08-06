@@ -17,16 +17,18 @@
 		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
 		$conn -> ConnectClose($link);
 		
-		$str = "";
+		$str = "test";
 		$len = count($data);
 		
+		/*
 		for($index=0;$index<$len;$index++) {
 			$str .= '<li class="col-sm-3">';
-			$str .= '<a title=' . '"' . $data[$index]["message"] . '"' . ' class="img-thumbnail swipebox" href=' . '"' . "https://graph.facebook.com/" + $data[$index]["obj_id"] + "/picture?type=normal" . '"' . '>';
+			$str .= "<a title=" . '"' . $data[$index]["message"] . '"' . ' class="img-thumbnail swipebox" href=' . '"' . "https://graph.facebook.com/" + $data[$index]["obj_id"] + "/picture?type=normal" . '"' . '>';
 			$str .= '<img data-src=' . '"' . "https://graph.facebook.com/" + $data[$index]["obj_id"] + "/picture?type=thumbnail" . '"' . ' class="img-responsive">';
 			$str .= '</a>';
 			$str .= '</li>';
 		}
+		*/
 		
 		Flight::render('index_view.php', array('data' => $str));
 	});
