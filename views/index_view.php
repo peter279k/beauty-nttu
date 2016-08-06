@@ -42,6 +42,9 @@
 					<li>
                         <a href="/beauty-nttu/man">型男版</a>
                     </li>
+					<li>
+                        <a href="/beauty-nttu/">正妹版</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
