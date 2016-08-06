@@ -27,7 +27,7 @@
 			
 			$str .= '<div class="col-sm-3">';
 			$str .= '<a title="' . $message . '" class="swipebox" href="'. $normal . '">';
-			$str .= '<img src="'. $thumbnail . '" alt="image">';
+			$str .= '<img src="'. $thumbnail . '" alt="image" class="imagelightbox ">';
 			$str .= '</a>';
 			$str .= '</div>';
 		}

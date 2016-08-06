@@ -34,7 +34,7 @@
     <div id="main_area">
         <!-- Slider -->
         <div class="row">
-            <div class="col-sm-12" id="slider-thumbs">
+            <div class="col-sm-12">
                 <!-- Bottom switcher of slider -->
                 <?php echo $data; ?>
             </div>
