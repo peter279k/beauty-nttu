@@ -1,6 +1,7 @@
 <?php
 	require "vendor/autload.php";
 	require "script/ConnectDB.php";
+	ini_set("display_errors", "On");
 	
 	$app = new \Slim\Slim();
 	
