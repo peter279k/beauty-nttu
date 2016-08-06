@@ -28,16 +28,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">表特東大</a>
+                <a class="navbar-brand" href="/beauty-nttu/">表特東大</a>
             </div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/about">關於我</a>
+                        <a href="/beauty-nttu/about">關於我</a>
                     </li>
                     <li>
-                        <a href="/contact">聯絡我們</a>
+                        <a href="/beauty-nttu/contact">聯絡我們</a>
+                    </li>
+					<li>
+                        <a href="/beauty-nttu/man">型男版</a>
                     </li>
                 </ul>
             </div>
