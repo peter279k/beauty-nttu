@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>表特牆</title>
 	<link href="bower_components/bootswatch/flatly/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/swipebox/src/css/swipebox.min.css" rel="stylesheet">
 	<style>
 		.hide-bullets {
 			list-style:none;
