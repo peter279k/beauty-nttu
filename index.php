@@ -10,6 +10,8 @@
 	$app = new Engine();
 	
 	$app -> route('GET /', function() {
+		header("Content-Type: text/html");
+		
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
 		$conn = new ConnectDB();
 		$link = $conn -> InitialDB();
@@ -27,7 +29,7 @@
 			$str .= '</li>';
 		}
 		
-		Flight::render('index_view.php', array('body' => $str));
+		Flight::render('index_view.php', array('data' => $str));
 	});
 	
 	$app -> route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
