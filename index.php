@@ -3,26 +3,28 @@
 	require "script/ConnectDB.php";
 	ini_set("display_errors", "On");
 	
-	Flight::route('GET /', function() {
-		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
-		$conn = new ConnectDB();
-		$link = $conn -> InitialDB();
-		$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
-		$conn -> ConnectClose($link);
-		$str = "";
-		$len = count($data);
+	Flight::route('GET /@FileName', function($FileName) {
+		if($FileName === "index") {
+			$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
+			$conn = new ConnectDB();
+			$link = $conn -> InitialDB();
+			$data = $conn -> ProcessData($link, $sql, array(), "get-image-id");
+			$conn -> ConnectClose($link);
+			$str = "";
+			$len = count($data);
 		
-		for($index=0;$index<$len;$index++) {
-			$str .= '<li class="col-sm-3">';
-			$str .= '<a title="' . $data[$index]["message"] . '" class="img-thumbnail swipebox" href="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=normal" . '">';
-			$str .= '<img data-src="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=thumbnail" . '" class="img-responsive">';
-			$str .= '</a>';
-			$str .= '</li>';
+			for($index=0;$index<$len;$index++) {
+				$str .= '<li class="col-sm-3">';
+				$str .= '<a title="' . $data[$index]["message"] . '" class="img-thumbnail swipebox" href="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=normal" . '">';
+				$str .= '<img data-src="' . "https://graph.facebook.com/" + $data[$index]["object_id"] + "/picture?type=thumbnail" . '" class="img-responsive">';
+				$str .= '</a>';
+				$str .= '</li>';
+			}
+		
+			//echo $str;
+			Flight::render('index_view.php', array('data' => $str));
+			//Flight::redirect('./index_view.php', 401);
 		}
-		
-		echo $str;
-		Flight::render('index_view.php', array('data' => $str));
-		Flight::redirect('./index_view.php', 401);
 	});
 	
 	Flight::route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
