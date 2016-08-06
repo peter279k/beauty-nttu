@@ -21,8 +21,8 @@
 			$str .= '</a>';
 			$str .= '</li>';
 		}
-		
-		$app -> render('index_view.php', array('data' => $str));
+		echo $str;
+		//$app -> render('index_view.php', array('data' => $str));
 	});
 	
 	$app -> get('/bower_components/bootswatch/flatly/:FileName', function($FileName) {
