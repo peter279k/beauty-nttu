@@ -5,11 +5,11 @@
 	require "vendor/autoload.php";
 	require "script/ConnectDB.php";
 	
-	$app = new \Slim\Slim();
+	use flight\Engine;
 	
-	$app -> get('/', function() {
-		echo "Hello World";
-		/*
+	$app = new Engine();
+	
+	$app -> route('GET /', function() {
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
 		$conn = new ConnectDB();
 		$link = $conn -> InitialDB();
@@ -25,45 +25,44 @@
 			$str .= '</a>';
 			$str .= '</li>';
 		}
-		echo $str;
-		//$app -> render('index_view.php', array('data' => $str));
-		*/
+		
+		$app -> render('index_view.php', array('data' => $str));
 	});
 	
-	$app -> get('/bower_components/bootswatch/flatly/:FileName', function($FileName) {
+	$app -> route('GET /bower_components/bootswatch/flatly/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 	
-	$app -> get('/css/:FileName', function($FileName) {
+	$app -> route('GET /css/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 	
-	$app -> get('/bower_components/jquery/dist/:FileName', function($FileName) {
+	$app -> route('GET /bower_components/jquery/dist/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 	
-	$app -> get('/bower_components/bootstrap/dist/js/:FileName', function($FileName) {
+	$app -> route('GET /bower_components/bootstrap/dist/js/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 	
-	$app -> get('/bower_components/lazyloadxt/dist/:FileName', function($FileName) {
+	$app -> route('GET /bower_components/lazyloadxt/dist/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 	
-	$app -> get('/bower_components/swipebox/src/js/:FileName', function($FileName) {
+	$app -> route('GET /bower_components/swipebox/src/js/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 	
-	$app -> get('/js/:FileName', function($FileName) {
+	$app -> route('GET /js/@FileName', function($FileName) {
 		$FileName = htmlentities($FileName, "utf-8");
 		echo @file_get_contents($FileName);
 	});
 
-	$app -> run();
+	$app -> start();
 ?>

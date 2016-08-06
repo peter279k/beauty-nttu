@@ -23,7 +23,7 @@
             <div class="col-sm-12" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
                 <ul class="hide-bullets">
-					<?php echo $data; ?>
+					'<?php echo $data; ?>'
                 </ul>
             </div>
             <!--/Slider-->

@@ -1,6 +1,6 @@
 {
     "require": {
-        "slim/slim": "2.*",
+        "mikecao/flight": "^1.2",
 		"guzzlehttp/guzzle": "^6.2"
     }
 }
