@@ -6,6 +6,8 @@
 	$app = new \Slim\Slim();
 	
 	$app -> get('/', function() {
+		echo "Hello World";
+		/*
 		$sql = "SELECT `message`, `obj_id`, `created_time` FROM  `beauty_nttu`  WHERE `message` LIKE '%【正妹】%'";
 		$conn = new ConnectDB();
 		$link = $conn -> InitialDB();
@@ -23,6 +25,7 @@
 		}
 		echo $str;
 		//$app -> render('index_view.php', array('data' => $str));
+		*/
 	});
 	
 	$app -> get('/bower_components/bootswatch/flatly/:FileName', function($FileName) {
